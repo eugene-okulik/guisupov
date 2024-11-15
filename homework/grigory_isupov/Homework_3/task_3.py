@@ -7,4 +7,3 @@ average_geo = (a + b) ** 0.5
 
 print("Среднее арифметическое = ", average_ar)
 print("Среднее геометрическое = ", average_geo)
-
