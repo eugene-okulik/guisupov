@@ -17,15 +17,15 @@ school_book_4 = Books("Собачье сердце", "Булгаков", 100, "1
 school_book_5 = Books("Каштанка", "Чехов", 95, "13: 978-2-266-11156-5")
 
 print(f"Название: {school_book.title}, Автор: {school_book.author}, страниц: {school_book.page_count}, "
-      f"материал: {school_book.page_material}{", зарезервирована" if school_book.is_reserved else ''}")
+      f"материал: {school_book.page_material}{', зарезервирована' if school_book.is_reserved else ''}")
 print(f"Название: {school_book_2.title}, Автор: {school_book_2.author}, страниц: {school_book_2.page_count}, "
-      f"материал: {school_book_2.page_material}{", зарезервирована" if school_book_2.is_reserved else ''}")
+      f"материал: {school_book_2.page_material}{', зарезервирована' if school_book_2.is_reserved else ''}")
 print(f"Название: {school_book_3.title}, Автор: {school_book_3.author}, страниц: {school_book_3.page_count}, "
-      f"материал: {school_book_3.page_material}{", зарезервирована" if school_book_3.is_reserved else ''}")
+      f"материал: {school_book_3.page_material}{', зарезервирована' if school_book_3.is_reserved else ''}")
 print(f"Название: {school_book_4.title}, Автор: {school_book_4.author}, страниц: {school_book_4.page_count}, "
-      f"материал: {school_book_4.page_material}{", зарезервирована" if school_book_4.is_reserved else ''}")
+      f"материал: {school_book_4.page_material}{', зарезервирована' if school_book_4.is_reserved else ''}")
 print(f"Название: {school_book_5.title}, Автор: {school_book_5.author}, страниц: {school_book_5.page_count}, "
-      f"материал: {school_book_5.page_material}{", зарезервирована" if school_book_5.is_reserved else ''}")
+      f"материал: {school_book_5.page_material}{', зарезервирована' if school_book_5.is_reserved else ''}")
 
 
 class SchoolBook(Books):
