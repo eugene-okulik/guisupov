@@ -24,9 +24,8 @@ class SchoolBook(Books):
     def get_description(self):
         base_description = super().get_description()
         return (
-                base_description
-                + f", предмет: {self.subject}, класс: {self.class_room}"
-        )
+            base_description
+            + f", предмет: {self.subject}, класс: {self.class_room}")
 
 
 school_book_1 = Books("Война и мир", "Толстой", 100, "13: 978-2-266-1115-0", True)
@@ -49,4 +48,5 @@ print(school_book_2.get_description())
 print(school_book_3.get_description())
 print(school_book_4.get_description())
 print(school_book_5.get_description())
+print(school_book_6.get_description())
 print(school_book_7.get_description())
