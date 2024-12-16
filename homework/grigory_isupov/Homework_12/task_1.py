@@ -22,8 +22,8 @@ class Rose(Flower):
 class Astra(Flower):
     """Класс для астр"""
 
-    def __init__(self, color, fresh_ness, stem_lenght, price):
-        super().__init__("Astra", color, fresh_ness, stem_lenght, price)
+    def __init__(self, color, fresh_ness, stem_length, price):
+        super().__init__("Astra", color, fresh_ness, stem_length, price)
 
 
 class Daisy(Flower):
@@ -84,7 +84,7 @@ rose1 = Rose(color="Red", stem_length=50, fresh_ness=2, price=150)
 rose2 = Rose(color="White", stem_length=40, fresh_ness=1, price=130)
 tulip1 = Tulip(color="Yellow", stem_length=30, fresh_ness=3, price=100)
 daisy1 = Daisy(color="White", stem_length=25, fresh_ness=4, price=80)
-astra1 = Astra(color="Orange", stem_lenght=35, fresh_ness=5, price=95)
+astra1 = Astra(color="Orange", stem_length=35, fresh_ness=5, price=95)
 
 # Создаю букет
 bouquet = Bouquet()
