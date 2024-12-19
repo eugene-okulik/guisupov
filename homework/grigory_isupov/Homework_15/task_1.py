@@ -92,7 +92,7 @@ db.commit()
 # Получаею все оценки студента
 cursor.execute(
     """
-    SELECT value AS 'оценки', lesson_id AS 'предмет' 
+    SELECT value AS 'оценки', lesson_id AS 'предмет'
     FROM marks WHERE student_id = %s
        """, (student_id,)
 )
@@ -109,7 +109,7 @@ for row in cursor.fetchall():
 # Получаю всю информацию по студенту
 cursor.execute(
     """
-    SELECT 
+    SELECT
         students.id AS 'id студента',
         students.name AS 'имя студента',
         students.second_name AS 'фамилия студента',
