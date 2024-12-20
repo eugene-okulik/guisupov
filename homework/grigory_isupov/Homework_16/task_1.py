@@ -32,7 +32,7 @@ with open(csv_file_path, newline='') as csv_file:
 
         # Формирую запрос по полному совпадению
         query = """
-                SELECT 
+                SELECT
                     students.name AS 'имя студента',
                     students.second_name AS 'фамилия студента',
                     `groups`.title AS 'название группы',
@@ -46,7 +46,7 @@ with open(csv_file_path, newline='') as csv_file:
                 LEFT JOIN marks ON marks.student_id = students.id
                 LEFT JOIN lessons ON marks.lesson_id = lessons.id
                 LEFT JOIN subjets ON lessons.subject_id = subjets.id
-                WHERE students.name = %s 
+                WHERE students.name = %s
                   AND students.second_name = %s
                   AND `groups`.title = %s
                   AND books.title = %s
