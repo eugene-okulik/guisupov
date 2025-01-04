@@ -5,13 +5,13 @@ from test_api_guisupov.endpoints.endpoint import Endpoint
 class NewObject(Endpoint):
     post_id = None
 
+
     def create_new_object(self):
 
 
         self.response = requests.post(f'{self.host}/object', headers=self.headers, json=self.default_body)
         self.response_data = self.response.json()
         self.post_id = self.response_data['id']
-        # print(self.post_id)
         print(self.response.json())
         print(self.post_id)
 
