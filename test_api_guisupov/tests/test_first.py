@@ -12,6 +12,7 @@ def test_get_object(get_object_endpoint, post_id, create_post_endpoint):
     expected_body = create_post_endpoint.default_body
     get_object_endpoint.check_object_data(expected_body)
 
+
 @pytest.mark.smoke
 @allure.story("API Create Object")
 @allure.feature("POST method")
@@ -19,6 +20,7 @@ def test_get_object(get_object_endpoint, post_id, create_post_endpoint):
 def test_create_object(post_id, create_post_endpoint):
     create_post_endpoint.check_that_status_is_200()
     create_post_endpoint.check_validate_response_data()
+
 
 @pytest.mark.smoke
 @allure.story("API Update Object (PUT)")
@@ -32,6 +34,7 @@ def test_put_a_post(update_put_endpoint, post_id):
     update_put_endpoint.check_response_body_is_correct(body['name'])
     update_put_endpoint.check_response_body_is_correct(body['name'], body['data']['color'], body['data']['size'])
 
+
 @pytest.mark.smoke
 @allure.story("API Update Object (PATCH)")
 @allure.feature("PATCH method")
@@ -43,6 +46,7 @@ def test_patch(update_patch_endpoint, post_id):
     update_patch_endpoint.check_that_status_is_200()
     update_patch_endpoint.check_response_body_is_correct(body['name'])
     update_patch_endpoint.check_response_body_is_correct(body['name'], body['data']['color'])
+
 
 @pytest.mark.smoke
 @allure.story("API Delete Object")
@@ -60,6 +64,7 @@ TEST_DATA = [
     {"name": "Three", "data": {"color": "Blue", "size": "medium"}}
 ]
 
+
 @pytest.mark.smoke
 @pytest.mark.parametrize('data', TEST_DATA)
 @allure.story("API Create Object")
@@ -71,7 +76,3 @@ def test_parameterized_create_object(create_post_endpoint, deleting_object, data
     create_post_endpoint.check_that_status_is_200()
     create_post_endpoint.check_validate_response_data()
     deleting_object(create_post_endpoint.host, create_post_endpoint.headers, create_post_endpoint.post_id)
-
-
-
-
