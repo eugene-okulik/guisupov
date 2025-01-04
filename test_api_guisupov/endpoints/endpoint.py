@@ -17,7 +17,6 @@ class Endpoint:
             f"Expected status code 200, but got {self.response.status_code}"
         )
 
-
     @allure.step('Check that name is the same as sent')
     @allure.step('Check that name, color, or size is the same as sent')
     def check_response_body_is_correct(self, name=None, color=None, size=None):
