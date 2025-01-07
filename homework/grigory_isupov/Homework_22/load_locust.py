@@ -18,7 +18,7 @@ class PostsUser(HttpUser):
             self.id_list = [item['id'] for item in data]
             print(self.id_list)
         else:
-            print(f"Ошибка при получении постов, статус код: {self.response.status_code}")
+            print(f"Ошибка при получении списка постов, статус код: {self.response.status_code}")
             self.id_list = []
 
     @task(1)
